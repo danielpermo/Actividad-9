@@ -8,4 +8,4 @@ const pool = mysql2.createPool({
     database: process.env.DB_NAME
 });
 
-global.db = pool.promise();
+global.db = pool.promise(); 
