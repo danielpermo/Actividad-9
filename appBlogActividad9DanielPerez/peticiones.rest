@@ -24,11 +24,15 @@ DELETE {{host}}/api/posts
 ###### API AUTORES
 GET {{host}}/api/autores
 ###
+GET {{host}}/api/autores/12
+###
 POST {{host}}/api/autores
 Content-Type: application/json
 
 {
-
+    "nombre": "Daniel Perez",
+    "email": "danielperez@example.com",
+    "imagen": "https://example.com/imagen21.jpg"
 }
 ###
 PUT {{host}}/api/autores

@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         const [result] = await getAll();
         res.json(result);
     } catch (error) {
-        res.status(503).json({ fatal: error.message });
+        res.json({ fatal: error.message });
     }
 });
 
