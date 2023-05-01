@@ -15,14 +15,15 @@ router.get('/', async (req, res) => {
 
 // GET /api/clients/IDCLIENT
 router.get('/:autorId', async (req, res) => {
+
     const { autorId } = req.params;
 
     try {
         const [result] = await getById(autorId);
         if (result.length === 0) {
-            return res.json({ fatal: 'No existe un autor con ese ID' });
+            return res.json({ fatal: 'No existe un autor con ese ID en la base de datos' });
         }
-        res.json(result[0]);
+        res.json([result]);
     } catch (error) {
         res.json({ fatal: error.message });
     }

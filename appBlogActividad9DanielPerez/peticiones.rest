@@ -8,14 +8,17 @@ POST {{host}}/api/posts
 Content-Type: application/json
 
 {
-
+    "titulo": "Cómo preparar una cena romántica",
+    "descripcion": "¿Quieres sorprender a tu pareja con una cena romántica? Aprende cómo preparar el ambiente adecuado y un delicioso menú que conquiste su corazón.",
+    "categoria": "Cocina",
+    "autor_idautor": 17
 }
 ###
 PUT {{host}}/api/posts
 Content-Type: application/json
 
 {
-
+    
 }
 ###
 DELETE {{host}}/api/posts
@@ -24,7 +27,7 @@ DELETE {{host}}/api/posts
 ###### API AUTORES
 GET {{host}}/api/autores
 ###
-GET {{host}}/api/autores/12
+GET {{host}}/api/autores/20
 ###
 POST {{host}}/api/autores
 Content-Type: application/json
