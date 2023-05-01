@@ -1,3 +1,41 @@
 @host = http://localhost:3000
 
+
+###### API POSTS
 GET {{host}}/api/posts
+###
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+
+}
+###
+PUT {{host}}/api/posts
+Content-Type: application/json
+
+{
+
+}
+###
+DELETE {{host}}/api/posts
+
+
+###### API AUTORES
+GET {{host}}/api/autores
+###
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+
+}
+###
+PUT {{host}}/api/autores
+Content-Type: application/json
+
+{
+
+}
+###
+DELETE {{host}}/api/autores
