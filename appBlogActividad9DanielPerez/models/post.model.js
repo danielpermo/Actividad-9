@@ -1,0 +1,1 @@
+const getAll = () => db.query('select * from posts')
