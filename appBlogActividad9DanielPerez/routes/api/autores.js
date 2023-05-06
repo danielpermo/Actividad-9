@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// GET /api/clients/autorId
+// GET /api/autores/autorId
 router.get('/:autorId', async (req, res) => {
 
     const { autorId } = req.params;
@@ -29,7 +29,7 @@ router.get('/:autorId', async (req, res) => {
     }
 });
 
-// POST /api/clients/autorId
+// POST /api/autores/autorId
 router.post('/', async (req, res) => {
     try {
         const [result] = await create(req.body);
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// PUT /api/clients/autorId
+// PUT /api/autores/autorId
 router.put('/:autorId', async (req, res) => {
     const { autorId } = req.params;
 
@@ -53,7 +53,7 @@ router.put('/:autorId', async (req, res) => {
     }
 });
 
-// DELETE /api/clients/autorId
+// DELETE /api/autores/autorId
 router.delete('/:autorId', async (req, res) => {
     const { autorId } = req.params;
 

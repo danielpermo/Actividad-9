@@ -4,6 +4,10 @@
 ###### API POSTS
 GET {{host}}/api/posts
 ###
+GET  {{host}}/api/posts/8
+###
+GET {{host}}/api/posts/autor/10
+###
 POST {{host}}/api/posts
 Content-Type: application/json
 
