@@ -1,5 +1,5 @@
 const getAll = () => {
-    return db.query('select p.*, a.nombre, a.email, a.imagen from posts as p, autores as a where autor_idautor = idautor');
+    return db.query('select p.*, a.nombre, a.email, a.imagen from posts as p, autores as a where autor_idautor = idautor order by idposts asc');
 }
 
 const getById = (postId) => {
