@@ -38,11 +38,13 @@ Content-Type: application/json
     "imagen": "https://example.com/imagen21.jpg"
 }
 ###
-PUT {{host}}/api/autores
+PUT {{host}}/api/autores/20
 Content-Type: application/json
 
 {
-
+    "nombre": "Daniel Rodriguez",
+    "email": "danielrodriguez@example.com",
+    "imagen": "https://example.com/imagen20.jpg"
 }
 ###
-DELETE {{host}}/api/autores
+DELETE {{host}}/api/autores/20
