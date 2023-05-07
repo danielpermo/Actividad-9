@@ -6,8 +6,6 @@ GET {{host}}/api/posts
 ###
 GET  {{host}}/api/posts/8
 ###
-GET {{host}}/api/posts/autor/20
-###
 POST {{host}}/api/posts
 Content-Type: application/json
 
@@ -52,3 +50,8 @@ Content-Type: application/json
 }
 ###
 DELETE {{host}}/api/autores/20
+
+
+###### API POSTS_AUTOR
+###
+GET {{host}}/api/posts_autor/20

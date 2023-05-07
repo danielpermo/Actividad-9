@@ -6,10 +6,6 @@ const getById = (postId) => {
     return db.query('select * from posts where idposts = ?', [postId]);
 }
 
-const getByAutorId = (autorId) => {
-    return db.query('select * from posts where autor_idautor = ?', [autorId]);
-}
-
 const create = ({ titulo, descripcion, categoria, autor_idautor }) => {
     return db.query('insert into posts (titulo, descripcion, categoria, autor_idautor) values (?,?,?,?)', [titulo, descripcion, categoria, autor_idautor]);
 }
@@ -19,6 +15,5 @@ const create = ({ titulo, descripcion, categoria, autor_idautor }) => {
 module.exports = {
     getAll,
     getById,
-    getByAutorId,
     create
 }

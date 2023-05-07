@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAll, create, getById, getByAutorId } = require('../../models/post.model');
+const { getAll, create, getById } = require('../../models/post.model');
 
 // GET /api/posts
 router.get('/', async (req, res) => {
@@ -24,23 +24,6 @@ router.get('/:postId', async (req, res) => {
             return res.json({ fatal: 'No existe un autor con ese ID en la base de datos' });
         }
         res.json(result[0]);
-    } catch (error) {
-        res.json({ fatal: error.message });
-    }
-});
-
-// GET /api/posts/autor/autorId
-router.get('/autor/:autorId', async (req, res) => {
-    
-    const { autorId } = req.params;
-
-    try {
-        const [result] = await getByAutorId(autorId);
-        
-        if (result.length === 0) {
-            return res.json({ fatal: 'No existe un autor con ese ID en la base de datos' });
-        }
-        res.json(result);
     } catch (error) {
         res.json({ fatal: error.message });
     }
