@@ -3,7 +3,7 @@ const getAll = () => {
 }
 
 const getById = (postId) => {
-    return db.query('select * from posts where idposts = ?', [postId]);
+    return db.query('select posts.*, a.nombre, a.email, a.imagen from posts, autores as a where idposts = ? and autor_idautor = idautor', [postId]);
 }
 
 const create = ({ titulo, descripcion, categoria, autor_idautor }) => {
