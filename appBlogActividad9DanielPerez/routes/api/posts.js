@@ -31,15 +31,16 @@ router.get('/:postId', async (req, res) => {
 
 // GET /api/posts/autor/autorId
 router.get('/autor/:autorId', async (req, res) => {
-
+    
     const { autorId } = req.params;
 
     try {
         const [result] = await getByAutorId(autorId);
+        
         if (result.length === 0) {
             return res.json({ fatal: 'No existe un autor con ese ID en la base de datos' });
         }
-        res.json(result[0]);
+        res.json(result);
     } catch (error) {
         res.json({ fatal: error.message });
     }
