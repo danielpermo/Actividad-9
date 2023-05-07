@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAll, create, getById } = require('../../models/post.model');
+const { getAll, create, getById, update, deleteById } = require('../../models/post.model');
 
 // GET /api/posts
 router.get('/', async (req, res) => {
@@ -37,6 +37,32 @@ router.post('/', async (req, res) => {
         res.json(post[0]);
     } catch (error) {
         res.json({ fatal: error.message });
+    }
+});
+
+// PUT /api/posts/postId
+router.put('/:postId', async (req, res) => {
+    const { postId } = req.params;
+
+    try {
+        await update(postId, req.body);
+        const [post] = await getById(postId);
+        res.json(post[0]);
+    } catch (error) {
+        res.json({ fatal: error.message })
+    }
+});
+
+// DELETE /api/posts/postId
+router.delete('/:postId', async (req, res) => {
+    const { postId } = req.params;
+
+    try {
+        const [post] = await getById(postId);
+        await deleteById(postId);
+        res.json(post[0]);
+    } catch (error) {
+        res.json({ fatal: error.message })
     }
 });
 

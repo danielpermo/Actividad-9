@@ -10,10 +10,22 @@ const create = ({ titulo, descripcion, categoria, autor_idautor }) => {
     return db.query('insert into posts (titulo, descripcion, categoria, autor_idautor) values (?,?,?,?)', [titulo, descripcion, categoria, autor_idautor]);
 }
 
+const update = (postId, { titulo, descripcion, categoria, autor_idautor }) => {
+    return db.query(
+        'update posts set titulo = ?, descripcion = ?, categoria = ?, autor_idautor = ? where idposts = ?',
+        [titulo, descripcion, categoria, autor_idautor, postId]
+    )
+}
+
+const deleteById = (postId) => {
+    return db.query('delete from posts where idposts = ?', [postId]);
+}
 
 
 module.exports = {
     getAll,
     getById,
-    create
+    create,
+    update,
+    deleteById
 }

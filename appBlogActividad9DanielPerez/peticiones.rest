@@ -16,11 +16,14 @@ Content-Type: application/json
     "autor_idautor": 17
 }
 ###
-PUT {{host}}/api/posts
+PUT {{host}}/api/posts/51
 Content-Type: application/json
 
 {
-    
+    "titulo": "Cómo preparar un picnic",
+    "descripcion": "¿Quieres sorprender a tu pareja con un picnic? Aprende cómo preparar el ambiente adecuado y un delicioso menú que conquiste su corazón.",
+    "categoria": "Campo",
+    "autor_idautor": 18
 }
 ###
 DELETE {{host}}/api/posts
