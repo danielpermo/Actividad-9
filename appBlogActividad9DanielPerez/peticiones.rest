@@ -26,7 +26,7 @@ Content-Type: application/json
     "autor_idautor": 18
 }
 ###
-DELETE {{host}}/api/posts
+DELETE {{host}}/api/posts/51
 
 
 ###### API AUTORES
